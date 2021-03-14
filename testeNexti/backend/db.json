@@ -1,0 +1,84 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "SKU": 1234,
+      "name": "Caneta",
+      "description": "marca BIC",
+      "price": 2.5,
+      "quantity": 2
+    },
+    {
+      "id": 2,
+      "SKU": 1235,
+      "name": "Caneta",
+      "description": "marca Faber",
+      "price": 2,
+      "quantity": 2
+    },
+    {
+      "id": 3,
+      "SKU": 1236,
+      "name": "Lápis",
+      "description": "marca TRIS",
+      "price": 1.5,
+      "quantity": 3
+    },
+    {
+      "id": 4,
+      "SKU": 0,
+      "name": "adas",
+      "description": "adas",
+      "price": 0,
+      "quantity": 0
+    },
+    {
+      "id": 5,
+      "SKU": 0,
+      "name": "asd",
+      "description": "asd",
+      "price": 0,
+      "quantity": 0
+    },
+    {
+      "id": 6,
+      "SKU": "2123",
+      "name": "dasd",
+      "description": "asdasd",
+      "price": "02.21",
+      "quantity": "02"
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Joao",
+      "cpf": "12345678901",
+      "birthDate": "01/01/01"
+    },
+    {
+      "id": 2,
+      "name": "Carla",
+      "cpf": "12345678902",
+      "birthDate": "02/01/01"
+    },
+    {
+      "id": 3,
+      "name": "Lucio",
+      "cpf": "12345678903",
+      "birthDate": "03/01/01"
+    },
+    {
+      "name": "Josefina",
+      "cpf": "12345678904",
+      "birthDate": "04/01/01",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "José",
+      "cpf": "12345678989",
+      "birthDate": "20/01/02"
+    }
+  ]
+}
