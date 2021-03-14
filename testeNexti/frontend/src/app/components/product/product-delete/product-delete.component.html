@@ -1,15 +1,33 @@
-<mat-card class="delete mat-elevation-z3">
-    Tem certeza que deseja remover este produto?
+<mat-card>
+    <mat-card-title>
+        Tem certeza que deseja excluir este produto?
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="SKU" [value]="product.SKU" name="SKU" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Nome"[value]="product.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição"[value]="product.description" name="description" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço(R$)"[value]="product.price" name="price" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Quantidade"[value]="product.quantity" name="quantity" disabled>
+        </mat-form-field>
+    </form>
+</mat-card>
 
 
-    <div align="bottom" align="right">
-    <button mat-raised-button (click)="deleteProduct()" color="warn" >
-        Remover
+<div align="right">
+    <button mat-raised-button (click)="deleteProduct()" color="warn"  >
+        Deletar
     </button>
 
-    <button mat-raised-button (click)="cancel()" >
+    <button mat-raised-button (click)="cancel()"  >
         Cancelar
     </button>
-    </div>
-
-</mat-card>
+</div>

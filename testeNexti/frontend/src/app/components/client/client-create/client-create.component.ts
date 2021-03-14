@@ -13,9 +13,9 @@ export class ClientCreateComponent implements OnInit {
 
   client: Client = {
     id: 0,
-    name: 'José',
-    cpf: '12345678989',
-    birthDate: '20/01/02'
+    name: '',
+    cpf: '',
+    birthDate: ''
   }
 
   constructor(private clientService: ClientService,

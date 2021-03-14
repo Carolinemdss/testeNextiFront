@@ -32,11 +32,11 @@ const routes: Routes = [
     component: ProductCreateComponent
   },
   {
-    path: "products/update",
+    path: "products/update/:id",
     component: ProductUpdateComponent
   },
   {
-    path: "products/delete",
+    path: "products/delete/:id",
     component: ProductDeleteComponent
   },
   {
@@ -52,11 +52,11 @@ const routes: Routes = [
     component: ClientCreateComponent
   },
   {
-    path: "clients/update",
+    path: "clients/update/:id",
     component: ClientUpdateComponent
   },
   {
-    path: "clients/delete",
+    path: "clients/delete/:id",
     component: ClientDeleteComponent
   },
   {

@@ -14,13 +14,14 @@ import {ProductService} from "../product.service";
 export class ProductListComponent implements AfterViewInit, OnInit {
 
   products!: Product[]
+  displayedColumns = ['id', 'SKU', 'name', 'description', 'price', 'quantity', 'action'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatTable) table!: MatTable<Product>;
   dataSource: ProductListDatasource;
 
-  displayedColumns = ['id', 'SKU', 'name', 'description', 'price', 'quantity', 'action'];
+
 
   constructor(private productService: ProductService) {
     this.dataSource = new ProductListDatasource();

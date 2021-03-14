@@ -1,13 +1,29 @@
-<mat-card class="delete mat-elevation-z3">
-    Tem certeza que deseja remover este cliente?
+<mat-card>
+    <mat-card-title>
+        Tem certeza que deseja remover este cliente?
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="client.name" name="name" disabled
+            >
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF" [value]="client.cpf" name="cpf"  disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date" matInput placeholder="Data de nascimento" [value]="client.birthDate" name="birthDate" disabled >
+        </mat-form-field>
+    </form>
 </mat-card>
 
-<div align="bottom" align="right">
+<div align="right">
     <button mat-raised-button (click)="deleteClient()" color="warn" >
-        Remover
+        Deletar
     </button>
 
-    <button mat-raised-button (click)="cancel()" >
+    <button mat-raised-button (click)="cancel()">
         Cancelar
     </button>
 </div>
+
+

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientService} from "../client.service";
-import {Router} from "@angular/router";
-import {HeaderService} from "../../template/header/header.service";
+import {ActivatedRoute, Router} from "@angular/router";
+import {Client} from "../client.model";
 
 @Component({
   selector: 'app-client-delete',
@@ -10,18 +10,31 @@ import {HeaderService} from "../../template/header/header.service";
 })
 export class ClientDeleteComponent implements OnInit {
 
+  client!: Client
+
   constructor(private clientService: ClientService,
-              private router: Router) {
+              private router: Router,
+              private route: ActivatedRoute) {
 
   }
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    // @ts-ignore
+    this.clientService.readById(id).subscribe((client) => {
+      this.client = client
+    });
+
   }
 
   deleteClient (): void {
-    this.clientService.showMessage('Cliente removido!')
-    this.router.navigate(['/clients'])
+    this.clientService.delete(this.client.id).subscribe(() => {
+      this.clientService.showMessage("Cliente removido!");
+      this.router.navigate(["/clients"]);
+    });
   }
+
+
 
   cancel (): void {
     this.router.navigate(['/clients'])
