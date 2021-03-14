@@ -1,0 +1,26 @@
+<mat-card>
+    <mat-card-title>
+        Editar informações do cliente
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="CPF">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="date" matInput placeholder="Data de nascimento">
+        </mat-form-field>
+    </form>
+</mat-card>
+
+<div align="right">
+    <button mat-raised-button (click)="updateClient()" >
+        Salvar
+    </button>
+
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</div>

@@ -1,0 +1,14 @@
+.full-width-table {
+  width: 100%;
+}
+
+.edit {
+  margin-right: 10px;
+}
+.edit > i {
+  color: dimgray;
+}
+
+.delete > i {
+  color: red;
+}
