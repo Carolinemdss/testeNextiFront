@@ -4,9 +4,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTable} from '@angular/material/table';
 import {ClientListDatasource} from './client-list-datasource';
 import {Client} from "../client.model";
-import {ProductService} from "../../product/product.service";
 import {ClientService} from "../client.service";
-import {Product} from "../../product/product.model";
 
 @Component({
   selector: 'app-client-list2',

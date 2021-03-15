@@ -32,10 +32,18 @@ export class ClientUpdateComponent implements OnInit {
 
 
   updateClient(): void {
-    this.clientService.update(this.client).subscribe(() => {
-      this.clientService.showMessage("Alterações salvas!");
-      this.router.navigate(["/clients"]);
-    });
+    if (this.client.name == ''){
+      this.clientService.showMessage('O campo nome é obrigatório!')
+    } else if (this.client.cpf == ''){
+      this.clientService.showMessage('O campo CPF é obrigatório!')
+    } else if (this.client.cpf.length < 14){
+      this.clientService.showMessage('CPF inválido!')
+    } else {
+      this.clientService.update(this.client).subscribe(() => {
+        this.clientService.showMessage("Alterações salvas!");
+        this.router.navigate(["/clients"]);
+      });
+    }
   }
 
 

@@ -4,10 +4,10 @@
     </mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="client.name" name="name" >
+            <input matInput placeholder="Nome" [(ngModel)]="client.name" name="name" required>
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="CPF" [(ngModel)]="client.cpf" name="cpf" >
+            <input matInput placeholder="CPF" [(ngModel)]="client.cpf" name="cpf"  required>
         </mat-form-field>
         <mat-form-field>
             <input type="date" matInput placeholder="Data de nascimento" [(ngModel)]="client.birthDate" name="birthDate" >

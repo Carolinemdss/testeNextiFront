@@ -8,20 +8,7 @@ import {Product} from "../product.model";
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Product [] = [
-  {id: 1, SKU: 121213, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 2, SKU: 1212123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 3, SKU: 123223, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 4, SKU: 123223, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 5, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 6, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 7, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 8, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 9, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 10, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 11, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 12, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 13, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2},
-  {id: 14, SKU: 123, name: 'Hydrogen', description: 'Marca', price: 2.50, quantity: 2}
+
 ];
 
 /**

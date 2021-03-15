@@ -35,6 +35,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { AppComponent } from './app.component'
+import { NgxMaskModule} from 'ngx-mask';
 
 
 @NgModule({
@@ -77,6 +78,9 @@ import { AppComponent } from './app.component'
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    NgxMaskModule.forRoot({
+      dropSpecialCharacters: false
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

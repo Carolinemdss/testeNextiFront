@@ -33,10 +33,18 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct (): void {
-  this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado!')
-      this.router.navigate(['/products'])
-  })
+    if ( !this.product.SKU || this.product.SKU == 0){
+      this.productService.showMessage('O campo SKU é obrigatório!')
+    } else if (this.product.name == ''){
+      this.productService.showMessage('O campo nome é obrigatório!')
+    } else if (!this.product.price || this.product.price == 0){
+      this.productService.showMessage('O campo preço é obrigatório!')
+    } else {
+      this.productService.create(this.product).subscribe(() => {
+        this.productService.showMessage('Producto cadastrado!')
+        this.router.navigate(['/products'])
+      })
+    }
   }
 
   cancel (): void {
