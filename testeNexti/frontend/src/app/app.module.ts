@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -37,6 +37,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { AppComponent } from './app.component'
 import { NgxMaskModule} from 'ngx-mask';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from  '@angular/common';
+
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -82,7 +86,10 @@ import { NgxMaskModule} from 'ngx-mask';
       dropSpecialCharacters: false
     }),
   ],
-  providers: [],
+  providers: [{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

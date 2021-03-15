@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {ProductService} from "../product.service";
 import { Router } from '@angular/router'
 import {Product} from "../product.model";
-import {HeaderService} from "../../template/header/header.service";
 
 @Component({
   selector: 'app-product-create',
@@ -21,12 +20,7 @@ export class ProductCreateComponent implements OnInit {
   }
 
   constructor(private productService: ProductService,
-              private router: Router, private headerService:HeaderService) {
-    headerService.headerData = {
-      title: 'Produtos',
-      icon: 'storefront',
-      routeUrl: '/products'
-    }
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -41,7 +35,7 @@ export class ProductCreateComponent implements OnInit {
       this.productService.showMessage('O campo preço é obrigatório!')
     } else {
       this.productService.create(this.product).subscribe(() => {
-        this.productService.showMessage('Producto cadastrado!')
+        this.productService.showMessage('Produto cadastrado!')
         this.router.navigate(['/products'])
       })
     }

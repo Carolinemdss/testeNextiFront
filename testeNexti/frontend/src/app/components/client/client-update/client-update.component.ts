@@ -15,12 +15,8 @@ export class ClientUpdateComponent implements OnInit {
   client!: Client
 
   constructor(private clientService: ClientService,
-              private router: Router, private headerService: HeaderService, private route: ActivatedRoute) {
-    headerService.headerData = {
-      title: 'Clientes',
-      icon: 'person',
-      routeUrl: '/clients'
-    }
+              private router: Router, private route: ActivatedRoute) {
+
   }
 
   ngOnInit(): void {

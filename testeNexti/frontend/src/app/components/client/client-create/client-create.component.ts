@@ -20,12 +20,7 @@ export class ClientCreateComponent implements OnInit {
   }
 
   constructor(private clientService: ClientService,
-              private router: Router, private headerService: HeaderService) {
-    headerService.headerData = {
-      title: 'Clientes',
-      icon: 'person',
-      routeUrl: '/clients'
-    }
+              private router: Router) {
   }
 
   ngOnInit(): void {

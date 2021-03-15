@@ -14,12 +14,7 @@ export class ProductUpdateComponent implements OnInit {
   product!: Product
 
   constructor(private productService: ProductService,
-              private router: Router, private headerService: HeaderService, private route: ActivatedRoute) {
-    headerService.headerData = {
-      title: 'Produtos',
-      icon: 'storefront',
-      routeUrl: '/products'
-    }
+              private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -31,10 +26,18 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   updateProduct(): void {
-    this.productService.update(this.product).subscribe(() => {
-      this.productService.showMessage("Alterações salvas!");
-      this.router.navigate(["/products"]);
-    });
+    if ( !this.product.SKU || this.product.SKU == 0){
+      this.productService.showMessage('O campo SKU é obrigatório!')
+    } else if (this.product.name == ''){
+      this.productService.showMessage('O campo nome é obrigatório!')
+    } else if (!this.product.price || this.product.price == 0){
+      this.productService.showMessage('O campo preço é obrigatório!')
+    } else {
+      this.productService.create(this.product).subscribe(() => {
+        this.productService.showMessage('Alterações salvas!')
+        this.router.navigate(['/products'])
+      })
+    }
   }
 
   cancel (): void {
