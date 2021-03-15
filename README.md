@@ -1,7 +1,7 @@
 # Instruções para execução
 
-1. Executar através do comando "npm start".
+1. Executar utilizando o comando "npm start" dentro da pasta Frontend.
 
 Disponível na porta 4200.
 
-Frontend desenvolvido utilizando Angular 11, TypeScript, CSS e HTML.
+Desenvolvido utilizando Angular 11, TypeScript, CSS e HTML.
