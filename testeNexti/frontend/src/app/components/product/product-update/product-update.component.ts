@@ -33,7 +33,7 @@ export class ProductUpdateComponent implements OnInit {
     } else if (!this.product.price || this.product.price == 0){
       this.productService.showMessage('O campo preço é obrigatório!')
     } else {
-      this.productService.create(this.product).subscribe(() => {
+      this.productService.update(this.product).subscribe(() => {
         this.productService.showMessage('Alterações salvas!')
         this.router.navigate(['/products'])
       })
